@@ -1,0 +1,6 @@
+<h1>My Genre</h1>
+
+<h3><%= @genre.name %></h3>
+
+<%= button_to "Genre Index", genres_path, method: :get %> 
+<%= button_to "Edit Genre", edit_genre_path(@genre), method: :get %>
