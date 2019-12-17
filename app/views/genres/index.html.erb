@@ -1,0 +1,9 @@
+<h1>Genres Index</h1>
+
+<% @genres.each do |genre| %>
+
+    <h3><%= link_to genre.name, genre_path(genre) %></h3>
+
+<% end %>
+
+ <%= button_to "Add New Genre", new_genre_path, method: :get %>
