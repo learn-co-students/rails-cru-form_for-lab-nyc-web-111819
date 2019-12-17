@@ -1,0 +1,13 @@
+<h1> Edit Song Form </h1>
+<%= form_for @song do |s| %>
+    <%= s.label :name %>
+    <%= s.text_field :name %>
+       
+    <%= s.label :Genre %>
+    <%= s.collection_select(:genre, Genre.all, :id, :name) %>
+
+    <%= s.label :Artist %>
+    <%= s.collection_select(:artist_id, Artist.all, :id, :name) %>
+
+    <%= s.submit %>
+    <% end %>
